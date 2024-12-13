@@ -1,0 +1,50 @@
+1. Enter the four input vectors. 
+2. Enter the two ouput vectors. 
+3. Specify the number of zeros in input vector “w”. 
+4. For i=1:4, w=w+x (i,1:4)'*t(i,1:2). 
+5. Print weight matrix “w”. 
+6. Exit. 
+
+
+
+
+
+
+
+
+
+
+% Hetero-associative neural net for mapping input vectors to output vectors.  
+clear; 
+clc;  
+ 
+x=[1 1 0 0;1 0 1 0;1 1 1 0;0 1 1 0];  
+ 
+t=[1 0;1 0;0 1;0 1];  
+ 
+w=zeros(4,2);  
+ 
+for i=1:4  
+ 
+w=w+x(i,1:4)'*t(i,1:2);  
+ 
+end  
+ 
+disp('Weight Matrix');  
+ 
+disp(w);
+
+
+
+
+
+
+
+
+
+
+Weight Matrix  
+     2     1  
+     1     2  
+     1     2  
+     0     0    

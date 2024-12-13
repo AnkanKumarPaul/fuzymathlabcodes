@@ -1,0 +1,72 @@
+1. Enter the two input vectors “x” 
+2. Enter the one ouput vector “t” 
+3. Specify the number of zeros in input vector “w”. 
+4. For i=1:2, w=w+x (i,1:4)'*t(i,1:4). 
+5. Print weight matrix “w. 
+6. yin=t*w 
+7. If yin(i)>0 then y(i)=1 else y(i)=-1 
+8. Print the calculated weight matrix.
+
+
+
+
+
+
+
+
+
+
+
+
+
+% Auto-association problem  
+clc;  
+clear;  
+x=[-1 -1 -1 -1;-1 -1 1 1];  
+t=[1 1 1  1];  
+w=zeros(4,4);  
+for i=1:2  
+w=w+x(i,1:4)'*x(i,1:4);  
+end  
+yin=t*w;  
+for i=1:4  
+if yin(i)>0  
+y(i)=1;  
+else  
+y(i)=-1;  
+end  
+end  
+disp('The calculated Weight Matrix');  
+disp(w);  
+if x(1,1:4)==y(1:4)| x(2,1:4)==y(1:4)  
+disp('The Vector is a Known vector');  
+else  
+disp('The Vector is a UnKnown vector');  
+end 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The calculated Weight Matrix 
+
+2     2     0     0  
+2     2     0     0  
+0     0     2     2  
+0     0     2     2   
+The Vector is an UnKnown vector
