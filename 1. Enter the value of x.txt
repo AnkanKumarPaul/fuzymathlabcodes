@@ -1,6 +1,0 @@
-1. Enter the value of x 
-2. y1= trimf(x,[1357]) for triangular membership function 
-3. y1= trapmf(x,[1357]) for trapezodial membership function 
-4. y1= gbellmf(x,[1357]) for bell shaped membership function 
-5. Plot the various membership functions. 
-6. Exit 
